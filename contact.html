@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact & Feedback — CalcHub</title>
+<meta name="description" content="Get in touch with CalcHub — send feedback, report a bug, or suggest a new calculator. Email kummariakhil259@gmail.com or call +91 8639958118.">
+<meta name="theme-color" content="#06070F">
+<link rel="canonical" href="https://calchub.example.com/contact.html">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo">🧮 <span>Calc<span class="mark">Hub</span></span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#categories">Categories</a>
+      <a href="index.html#popular">Popular</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle-btn" data-theme-toggle aria-label="Toggle dark mode">🌙</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main class="page-content container">
+  <span class="hero-eyebrow"><span class="dot"></span> Contact & feedback</span>
+  <h1 style="margin-bottom:10px;">Let's talk calculators</h1>
+  <p style="max-width:560px; margin-bottom:36px;">Found a bug, have feedback, or want to see a new calculator added? Reach us directly or send a message below — we read every one.</p>
+
+  <div class="contact-grid">
+    <div class="glass" style="padding:40px;">
+      <h2 style="margin-top:0;">Send a message</h2>
+      <div class="quick-action-row" style="margin-bottom:24px;">
+        <button type="button" class="quick-action glass" id="reportBugBtn"><span class="icon">🐞</span>Report a bug</button>
+        <button type="button" class="quick-action glass" id="suggestCalcBtn"><span class="icon">💡</span>Suggest a calculator</button>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+        </div>
+        <select name="subject" id="contactSubject" required>
+          <option value="" disabled selected>Choose a subject</option>
+          <option value="General feedback">General feedback</option>
+          <option value="Report a bug">Report a bug</option>
+          <option value="Suggest a calculator">Suggest a calculator</option>
+          <option value="Other">Other</option>
+        </select>
+        <textarea name="message" rows="6" placeholder="Your message" required></textarea>
+        <button type="submit" class="btn btn-primary btn-lg">Send message</button>
+      </form>
+      <p id="formStatus" style="margin-top:16px;"></p>
+    </div>
+
+    <div class="contact-info-card glass">
+      <div>
+        <h3>Reach us directly</h3>
+        <p style="margin-bottom:0;">Prefer email or a call? Use the details below — we typically reply within a couple of days.</p>
+      </div>
+
+      <a class="contact-channel" href="mailto:kummariakhil259@gmail.com">
+        <span class="icon">✉️</span>
+        <span>
+          <span class="label">Email</span><br>
+          <span class="value">kummariakhil259@gmail.com</span>
+        </span>
+      </a>
+
+      <a class="contact-channel" href="tel:+918639958118">
+        <span class="icon">📞</span>
+        <span>
+          <span class="label">Phone</span><br>
+          <span class="value">+91 8639958118</span>
+        </span>
+      </a>
+
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="mailto:kummariakhil259@gmail.com" class="btn btn-primary" style="flex:1;">Email us</a>
+        <a href="tel:+918639958118" class="btn btn-ghost" style="flex:1;">Call us</a>
+      </div>
+
+      <div>
+        <h3 style="font-size:0.95rem;">Quick links</h3>
+        <p style="margin-bottom:0; font-size:0.9rem;">Browse the <a href="index.html#categories" style="color:var(--accent-1); font-weight:600;">calculator categories</a> or check our <a href="about.html" style="color:var(--accent-1); font-weight:600;">about page</a> before reaching out — your question might already be answered.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo">🧮 <span>Calc<span class="mark">Hub</span></span></a>
+        <p style="margin-top:14px;">A fast, free, no-nonsense home for every calculator you'll ever need.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="index.html#categories">Categories</a>
+        <a href="index.html#popular">Popular calculators</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact & feedback</h4>
+        <a class="footer-contact-item" href="mailto:kummariakhil259@gmail.com"><span class="icon">✉️</span> kummariakhil259@gmail.com</a>
+        <a class="footer-contact-item" href="tel:+918639958118"><span class="icon">📞</span> +91 8639958118</a>
+        <a href="contact.html">Report a bug / suggest a calculator</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CalcHub. All calculations are estimates for informational purposes.</span>
+      <span>Built with HTML, CSS & vanilla JS.</span>
+    </div>
+  </div>
+</footer>
+<script src="js/theme.js"></script>
+<script src="js/premium-ui.js"></script>
+<script>
+document.getElementById("navToggle").addEventListener("click", () => document.getElementById("navLinks").classList.toggle("is-open"));
+
+document.getElementById("contactForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  document.getElementById("formStatus").textContent = "Thanks! This is a static demo form — connect it to your own backend or form service (e.g. Netlify Forms, Formspree) to receive messages, or email us directly at kummariakhil259@gmail.com.";
+  e.target.reset();
+});
+
+document.getElementById("reportBugBtn").addEventListener("click", () => {
+  document.getElementById("contactSubject").value = "Report a bug";
+  document.querySelector('.contact-form textarea').focus();
+});
+
+document.getElementById("suggestCalcBtn").addEventListener("click", () => {
+  document.getElementById("contactSubject").value = "Suggest a calculator";
+  document.querySelector('.contact-form textarea').focus();
+});
+</script>
+</body>
+</html>

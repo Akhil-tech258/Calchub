@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator — CalcHub</title>
+<meta name="description" content="Free online calculator on CalcHub.">
+<meta name="theme-color" content="#06070F">
+<link rel="canonical" href="https://calchub.example.com/calculator.html">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculator — CalcHub">
+<meta property="og:description" content="Free online calculator on CalcHub.">
+<meta property="og:image" content="assets/images/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<script type="application/ld+json" id="jsonLd">{}</script>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo">🧮 <span>Calc<span class="mark">Hub</span></span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#categories">Categories</a>
+      <a href="index.html#popular">Popular</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle-btn" data-theme-toggle aria-label="Toggle dark mode">🌙</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main class="calc-page-main container">
+  <div id="calculatorRoot"></div>
+
+  <section class="related-section">
+    <h2>Related calculators</h2>
+    <div class="grid grid-3" id="relatedGrid"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo">🧮 <span>Calc<span class="mark">Hub</span></span></a>
+        <p style="margin-top:14px;">A fast, free, no-nonsense home for every calculator you'll ever need.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="index.html#categories">Categories</a>
+        <a href="index.html#popular">Popular calculators</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact & feedback</h4>
+        <a class="footer-contact-item" href="mailto:kummariakhil259@gmail.com"><span class="icon">✉️</span> kummariakhil259@gmail.com</a>
+        <a class="footer-contact-item" href="tel:+918639958118"><span class="icon">📞</span> +91 8639958118</a>
+        <a href="contact.html">Report a bug / suggest a calculator</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CalcHub. All calculations are estimates for informational purposes.</span>
+      <span>Built with HTML, CSS & vanilla JS.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/calculators-data.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/calculator-engine.js"></script>
+<script src="js/premium-ui.js"></script>
+<script>
+document.getElementById("navToggle").addEventListener("click", () => document.getElementById("navLinks").classList.toggle("is-open"));
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+}
+</script>
+</body>
+</html>

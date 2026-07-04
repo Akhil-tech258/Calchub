@@ -1,0 +1,58 @@
+/* ============================================================
+   CalcHub — Responsive rules
+   ============================================================ */
+
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(3, 1fr); }
+  .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
+  .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid .footer-col:last-child { grid-column: 1 / -1; }
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 860px) {
+  .grid-4, .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid .footer-col:last-child { grid-column: auto; }
+  .hero { padding: 72px 0 48px; }
+  .cta-band { padding: 48px 28px; }
+}
+
+@media (max-width: 720px) {
+  .nav-links {
+    position: fixed; top: 68px; left: 0; right: 0; flex-direction: column; align-items: flex-start;
+    background: var(--surface-solid); border-bottom: 1px solid var(--border); padding: 20px 24px;
+    gap: 6px; display: none; z-index: 49; backdrop-filter: blur(20px);
+    max-height: calc(100vh - 68px); overflow-y: auto;
+  }
+  .nav-links.is-open { display: flex; animation: dropIn 0.25s ease; }
+  .nav-links a { width: 100%; padding: 12px 14px; }
+  .nav-toggle { display: block; }
+  .hero-stats { gap: 14px; }
+  .hero-stat { min-width: 44%; }
+  .section-header { flex-direction: column; align-items: flex-start; }
+  .calc-header { flex-direction: column; }
+  .fav-btn-lg { align-self: flex-end; }
+  .feature-grid { grid-template-columns: 1fr 1fr; }
+  .contact-form .form-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .hero h1 { font-size: 1.9rem; }
+  .calc-panel { padding: 26px 20px; }
+  .page-content .glass { padding: 26px 20px; }
+  .container { padding: 0 16px; }
+  .result-value { font-size: 1.05rem; }
+  .calc-form { grid-template-columns: 1fr; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .quick-action-row { flex-direction: column; }
+  .cta-actions { flex-direction: column; align-items: stretch; }
+  .hero-stat { min-width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .reveal { opacity: 1 !important; transform: none !important; filter: none !important; }
+}
